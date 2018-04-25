@@ -42,8 +42,8 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h3>To Do List</h3>
-                <ul>
+                <h1>To Do List</h1>
+                <ol>
                     {this.state.todos.map((todo, index) =>
                         <ToDo
                             key={index}
@@ -53,7 +53,7 @@ class App extends Component {
                             deleteTodo={() => this.deleteTodo(index)}
                         />
                     )}
-                </ul>
+                </ol>
                 <form onSubmit={(e) => this.handleSubmit(e)} >
                     <input type="text" value={this.state.newTodoDescription} onChange={(e) => this.handleChange(e)} />
                     <input type="submit" />
