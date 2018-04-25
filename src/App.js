@@ -15,6 +15,10 @@ class App extends Component {
         };
     }
 
+    deleteTodo() {
+        console.log("deleteTodo executed");
+    }
+
     handleChange(e) {
         this.setState({ newTodoDescription: e.target.value })
     }
@@ -36,9 +40,16 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <h3>To Do List</h3>
                 <ul>
                     {this.state.todos.map((todo, index) =>
-                        <ToDo key={index} description={todo.description} isCompleted={todo.isCompleted} toggleComplete={() => this.toggleComplete(index)} />
+                        <ToDo
+                            key={index}
+                            description={todo.description}
+                            isCompleted={todo.isCompleted}
+                            toggleComplete={() => this.toggleComplete(index)}
+                            deleteTodo={() => this.deleteTodo(index)}
+                        />
                     )}
                 </ul>
                 <form onSubmit={(e) => this.handleSubmit(e)} >
