@@ -15,8 +15,10 @@ class App extends Component {
         };
     }
 
-    deleteTodo() {
-        console.log("deleteTodo executed");
+    deleteTodo(index) {
+        const list = this.state.todos.slice();
+        const newList = list.filter((todo, i) => i !== index);
+        this.setState({ todos: newList });
     }
 
     handleChange(e) {
