@@ -55,8 +55,8 @@ class App extends Component {
                     )}
                 </ol>
                 <form onSubmit={(e) => this.handleSubmit(e)} >
-                    <input type="text" value={this.state.newTodoDescription} onChange={(e) => this.handleChange(e)} />
-                    <input type="submit" />
+                    <input type="text" placeholder="Add your To-Do's here" value={this.state.newTodoDescription} onChange={(e) => this.handleChange(e)} />
+                    <input type="submit" value="Add" />
                 </form>
 
             </div>

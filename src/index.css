@@ -1,34 +1,41 @@
+.App {
+    width: 30rem;
+}
+
 body {
   margin: 0;
-  padding: 100px;
+  padding: 20px 100px 20px 100px;
   font-family: sans-serif;
-  background: blue;
+  background: white;
 }
 
 ol {
-    list-style-type: upper-roman;
-    list-style-position: outside;
+    list-style-type: lower-alpha;
+    list-style-position: inside;
     color: white;
     padding: 0;
     background: blue;
+
 }
 
 button {
     align-content: center;
-    margin: 0rem 0rem 0.25rem 2rem;
+    margin: 0rem 0rem 0.25rem 1rem;
     color: red;
+    align-content: flex-end;
 }
 
 li {
-    background: #fafbfc;
+    background: blue;
     padding: 5px;
     margin-left: 5px;
     padding: 5px;
     border: 1px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    color: white;
+    text-align: left;
 }
 
 h1 {
-    color:white;
-    background: blue;
+    color:black;
+    background: white;
 }
